@@ -1,0 +1,142 @@
+/* Base Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.navbar-logo {
+  font-weight: bold;
+  font-size: 24px;
+  color: #242424;
+}
+
+/* Nav Links */
+.navbar-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 1.5rem;
+  padding: 0px;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #242424;
+  font-weight: 500;
+}
+
+.navbar-links li a:hover {
+  color: #000;
+}
+
+/* Action Buttons */
+.navbar-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-right: 3rem;
+}
+
+.sign-in-btn {
+  background: transparent;
+  border: none;
+  font-weight: 600;
+  color: #242424;
+  cursor: pointer;
+}
+
+.get-started-btn {
+  background-color: #22c55e;
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.get-started-btn:hover {
+  background-color: #16a34a;
+}
+
+/* Hamburger Icon (Mobile Only) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+  }
+
+  .hamburger {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+  }
+
+
+  .navbar-links,
+  .navbar-actions {
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    margin: auto;
+  }
+
+  .navbar-links.active,
+  .navbar-actions.active {
+    display: flex;
+  }
+
+  .navbar-links li {
+    margin-bottom: 1rem;
+    width: auto;
+  }
+
+  .navbar-links li a {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar-actions button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
