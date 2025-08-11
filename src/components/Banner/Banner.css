@@ -1,0 +1,106 @@
+/* ==========================
+   BANNER STYLES (Desktop)
+========================== */
+.banner-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1rem;
+    height: 500px;
+    background-image: url('../../assets/banner-image.jpg');
+    background-size: calc(40% - 0rem) calc(120% - 3rem);
+    background-repeat: no-repeat;
+    background-position: right top;
+    border-bottom: #000 1px solid;
+}
+
+.banner-text {
+    width: 50%;
+    align-self: center;
+    padding: 0 2rem;
+    color: #000;
+}
+
+.banner-text h1 {
+    font-size: 3rem;
+    letter-spacing: -0.055em;
+    line-height: 80px;
+    margin-bottom: 1rem;
+}
+
+.break-word {
+    display: block;
+}
+
+
+.banner-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.banner-text button {
+    display: inline-block;
+    padding: 15px 20px;
+    font-size: 22px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    border-radius: 15px;
+}
+
+.banner-text button:hover {
+    background-color: #333;
+}
+
+/* ==========================
+   RESPONSIVE STYLES
+========================== */
+@media (max-width: 992px) {
+    .banner-section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        background-image: none;
+        background-color: #f8f8f8;
+        height: auto;
+    }
+
+    .banner-section::after {
+        content: "";
+        background-image: url('../../assets/banner-image.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 55vh;
+        padding-bottom: 2rem;
+        aspect-ratio: 2 / 1;
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .banner-text {
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .banner-text h1 {
+        font-size: 2rem;
+        padding: 1.5rem;
+        line-height: 55px;
+    }
+
+    .banner-text p {
+        font-size: 1rem;
+    }
+
+    .banner-text button {
+        font-size: 0.9rem;
+        width: auto;
+    }
+}
